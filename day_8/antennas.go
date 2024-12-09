@@ -48,7 +48,7 @@ func FindAllColinearPoints(A, B Coordinate, maxX, maxY int) (colinearPoints []Co
 	dx /= int(gcd)
 	dy /= int(gcd)
 
-	// Generate all colinear points of (B-A) within the bounds
+	// Generate all colinear points of with A and B, within the bounds
 	// C = A + lambda * (dx, dy)
 	colinearPoints = make([]Coordinate, 0, maxX*maxY)
 	for x, y := A.x, A.y; x < maxX && y < maxY && x >= 0 && y >= 0; x, y = x+dx, y+dy {
